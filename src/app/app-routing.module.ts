@@ -6,11 +6,12 @@ import { TableProductsComponent } from './components/tables/table-products/table
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { HomeComponent } from './components/home/home.component'
+import { AuthGuard } from './components/guards/auth.guard';
 
 
 const routes: Routes = [
   
-  {path: "Admin", component: AdminNavComponent, children: [
+  {path: "Admin", component: AdminNavComponent, canActivate:[AuthGuard], children: [
     { path: 'users', component: TableUsersComponent},
     { path: 'products', component: TableProductsComponent },
     { path: '', component: TableUsersComponent}
