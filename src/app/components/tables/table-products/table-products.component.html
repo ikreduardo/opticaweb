@@ -1,1 +1,46 @@
-<p>table-products works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <div class="card-title">
+                        Agregar nuevo producto:
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="selectedProduct.name" placeholder="Name" class="form-control mt-1">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="selectedProduct.description" placeholder="description" class="form-control mt-1">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" [(ngModel)]="selectedProduct.price" placeholder="Price" class="form-control mt-1">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="selectedProduct.discount" placeholder="Discount" class="form-control mt-1">
+                    </div>
+                    <button (click)="addOrEdit()" class="btn btn-success">
+                        Submit
+                    </button>
+                    <button *ngIf="selectedProduct.id !== 0"
+                     class="btn btn-danger ml-2"
+                     (click)="delete()">
+                        Delete
+                    </button>
+                    <button (click)="cleanForm()" class="btn btn-info ml-5">
+                        Clean Form
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <ul class="list-group mt-4">
+                <li *ngFor="let product of productsArray"
+                class="list-group-item list-group-item-action"
+                (click)="openForEdit(product)"
+                [class.active]="product == selectedProduct">
+                    <span class="badge badge-primary">{{product.id}}</span> {{product.name}} | Precio: $ {{product.price}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
