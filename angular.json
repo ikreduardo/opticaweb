@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "opticaweb"
+  "defaultProject": "opticaweb",
+  "cli": {
+    "analytics": "26e19551-4a65-48ff-a482-37d45d56f5b2"
+  }
 }
