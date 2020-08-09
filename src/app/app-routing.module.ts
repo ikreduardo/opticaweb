@@ -1,8 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AdminNavComponent } from './components/dashboard/admin-nav/admin-nav.component';
+import { TableUsersComponent } from './components/tables/table-users/table-users.component';
+import { TableProductsComponent } from './components/tables/table-products/table-products.component';
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  
+  {path: "Admin", component: AdminNavComponent, children: [{
+    path: 'users', component: TableUsersComponent
+  },{
+    path: 'products', component: TableProductsComponent
+  },
+  { path: '', component: TableUsersComponent}
+  ]},
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

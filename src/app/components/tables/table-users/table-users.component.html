@@ -1,0 +1,61 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <div class="card-title">
+                        Agregar nuevo usuario:
+                    </div>
+                    <div class="form-group">
+                        <input type="email" [(ngModel)]="selectedUser.email" placeholder="Email" class="form-control mt-1">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" [(ngModel)]="selectedUser.password" placeholder="password" class="form-control mt-1">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="selectedUser.username" placeholder="User name" class="form-control mt-1">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="selectedUser.last_name" placeholder="Last name" class="form-control mt-1">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="selectedUser.direction" placeholder="Direction" class="form-control mt-1">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="selectedUser.tel" placeholder="Tel" class="form-control mt-1">
+                    </div>
+                    <div class="form-group">
+                        <Label class="mr-4">Tipo de usuario</Label>
+                        <select name="typeuser" id="typeuser" form="form-group" [(ngModel)]="selectedUser.typeuser">
+                            <option value="1">Administrador     </option>
+                            <option value="2">Cliente           </option>
+                            <option value="3">Repartidor        </option>
+                          </select>
+                    </div>
+                    <button (click)="addOrEdit()" class="btn btn-success">
+                        Submit
+                    </button>
+                    <button *ngIf="selectedUser.id !== 0"
+                     class="btn btn-danger ml-2"
+                     (click)="delete()">
+                        Delete
+                    </button>
+                    <button (click)="cleanForm()" class="btn btn-info ml-5">
+                        Clean Form
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <ul class="list-group mt-4">
+                <li *ngFor="let user of usersArray"
+                class="list-group-item list-group-item-action"
+                (click)="openForEdit(user)"
+                [class.active]="user == selectedUser">
+                    <span class="badge badge-primary">{{user.id}}</span> {{user.username}} {{user.last_name}} | {{user.email}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
