@@ -16,6 +16,8 @@ import { TableProductsComponent } from './components/tables/table-products/table
 import { FormsModule } from "@angular/forms";
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
+import { TableRolComponent } from './components/tables/table-rol/table-rol.component';
+import { TableStoreComponent } from './components/tables/table-store/table-store.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { RegisterComponent } from './components/auth/register/register.component
     TableUsersComponent,
     TableProductsComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    TableRolComponent,
+    TableStoreComponent
   ],
   imports: [
     BrowserModule,

@@ -19,6 +19,7 @@ export class TableUsersComponent implements OnInit {
     if(this.selectedUser.id == 0){
       this.selectedUser.id = this.usersArray.length + 1;
       this.usersArray.push(this.selectedUser);
+      confirm('Se agrego a [ '+this.selectedUser.username+' '+this.selectedUser.last_name+' ] con exito.');
     }
     else{
       if(confirm('Deseas actualizar los datos de '+this.selectedUser.email.toString())){
