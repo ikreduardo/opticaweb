@@ -19,6 +19,9 @@ import { RegisterComponent } from './components/auth/register/register.component
 import { TableRolComponent } from './components/tables/table-rol/table-rol.component';
 import { TableStoreComponent } from './components/tables/table-store/table-store.component';
 
+import { ProductsService } from './../app/services/products.service';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,9 +43,10 @@ import { TableStoreComponent } from './components/tables/table-store/table-store
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
