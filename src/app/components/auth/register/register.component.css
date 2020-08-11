@@ -24,3 +24,8 @@
   .form-signin .form-control {
     height: 30px;
   }
+
+  .imghome{
+    width: 5%;
+    float: left;
+  }

@@ -7,19 +7,22 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { TableRolComponent } from "./components/tables/table-rol/table-rol.component";
 import { TableStoreComponent } from "./components/tables/table-store/table-store.component";
+import { HomeComponent } from "./components/main/home/home.component";
 
 
 const routes: Routes = [
   
   {path: "Admin", component: AdminNavComponent, children: [
-    { path: 'users', component: TableUsersComponent},
+    { path: 'users', component: TableUsersComponent },
     { path: 'products', component: TableProductsComponent },
     { path: 'rols', component: TableRolComponent },
     { path: 'stores', component: TableStoreComponent },
-    { path: '', component: TableUsersComponent}
+    { path: '', component: TableUsersComponent }
   ]},
-  {path: "login", component: LoginComponent},
-  {path: "register", component: RegisterComponent}
+  { path: "login", component: LoginComponent },
+  { path: "register", component: RegisterComponent },
+  { path: "home", component: HomeComponent },
+  { path: "", component: HomeComponent }
 ];
 
 @NgModule({

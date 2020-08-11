@@ -1,0 +1,68 @@
+.search{
+    margin-right: 25px;
+}
+
+.newbody{
+  background-image: url("/src/assets/img/log.png");
+  size: auto;  
+}
+.fir{
+  background-image: src("/src/assets/img/Clo.jpg");
+  background-size: auto;
+}
+
+/*MODAL COMPONENT*/
+.oscuro .modal-content {
+    background-color: #021f2e;
+    color: white;
+  }
+  .oscuro .close {
+    color: white;
+  }
+
+.azul {
+    background-color: #0fa1eb;
+  }
+  .background {
+    height: 100%;
+    width: 100%;
+    background-color: #80d61499;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #FFF;
+  }
+   
+  .img {
+    width: 250px;
+    margin-top: 10px;
+  }
+   
+  .form-signin {
+    width: 90%;
+    max-width: 200px;
+    padding: 0px;
+    margin: 0 auto;
+  }
+   
+  .form-signin .form-control {
+    height: 45px;
+  }
+
+  .text-center {
+    text-align: center!important;
+}
+
+ .panel1{
+    background-color: #FFF;
+  }
+
+  .btn1{
+      color: #FFF;
+  }
+  .t1{
+      color: #FFF;
+      font-style: italic;
+  }

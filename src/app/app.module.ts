@@ -18,6 +18,7 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { TableRolComponent } from './components/tables/table-rol/table-rol.component';
 import { TableStoreComponent } from './components/tables/table-store/table-store.component';
+import { HomeComponent } from './components/main/home/home.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TableStoreComponent } from './components/tables/table-store/table-store
     LoginComponent,
     RegisterComponent,
     TableRolComponent,
-    TableStoreComponent
+    TableStoreComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
