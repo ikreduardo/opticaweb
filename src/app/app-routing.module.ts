@@ -14,6 +14,8 @@ import { TableServicesComponent } from './components/tables/table-services/table
 import { TableOffersComponent } from './components/tables/table-offers/table-offers.component';
 import { TableMydriversComponent } from './components/tables/table-mydrivers/table-mydrivers.component';
 import { ClientComponent } from './components/dashboard/client/client.component';
+import { WellcomeAdminComponent } from './components/main/wellcome-admin/wellcome-admin.component';
+import { WellcomeSubAdminComponent } from './components/main/wellcome-sub-admin/wellcome-sub-admin.component';
 
 
 const routes: Routes = [
@@ -25,7 +27,7 @@ const routes: Routes = [
     { path: 'rols', component: TableRolComponent },
     { path: 'stores', component: TableStoreComponent },
     { path: "appointment", component: TableAppointmentComponent},
-    { path: '', component: TableUsersComponent }
+    { path: '', component: WellcomeAdminComponent }
   ]},
   // - RUTAS PARA EL MODULO SUB ADMIN
   { path: "sub-admin", component: SubadminNavComponent, children: [
@@ -34,7 +36,8 @@ const routes: Routes = [
     { path: "appointment", component: TableAppointmentComponent},
     { path: "services", component: TableServicesComponent},
     { path: "offers", component: TableOffersComponent},
-    { path: "mydrivers", component: TableMydriversComponent}
+    { path: "mydrivers", component: TableMydriversComponent},
+    { path: "", component: WellcomeSubAdminComponent}
   ]},
   // RUTAS INICIALES --- EJEMPLO http://localhost:4200/login
   { path: "login", component: LoginComponent },
