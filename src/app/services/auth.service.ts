@@ -15,5 +15,4 @@ export class AuthService {
     const path = this.endpoint + '/api/users/register'
     return this.http.post(path, user);
   }
-
 }
