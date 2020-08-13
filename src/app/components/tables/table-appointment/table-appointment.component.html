@@ -1,0 +1,50 @@
+<h2 class="title ml-4 mb-0">Administrar Citas</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <div class="card-title">
+                        Datos de Tienda:
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="selectedAppointment.asunto" placeholder="Asunto" class="form-control mt-1">
+                    </div>
+                    <div class="form-group">
+                        <input type="date" [(ngModel)]="selectedAppointment.fecha" placeholder="Fecha" class="form-control mt-1">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="selectedAppointment.cliente" placeholder="Cliente:" class="form-control mt-1">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="selectedAppointment.observacion" placeholder="Observacion:" class="form-control mt-1">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="selectedAppointment.sucursal" placeholder="Sucursal:" class="form-control mt-1">
+                    </div>
+                    <button (click)="addOrEdit()" class="btn btn-success">
+                        Submit
+                    </button>
+                    <button *ngIf="selectedAppointment.id !== 0"
+                     class="btn btn-danger ml-2"
+                     (click)="delete()">
+                        Delete
+                    </button>
+                    <button (click)="cleanForm()" class="btn btn-info ml-5">
+                        Clean Form
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <ul class="list-group mt-4">
+                <li *ngFor="let appointment of appointmentsArray"
+                class="list-group-item list-group-item-action"
+                (click)="openForEdit(appointment)"
+                [class.active]="appointment == selectedAppointment">
+                    <span class="badge badge-primary">{{appointment.id}}</span> {{appointment.asunto}}  - [ {{appointment.cliente}} ] | {{appointment.sucursal}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

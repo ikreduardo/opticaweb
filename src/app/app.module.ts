@@ -22,6 +22,11 @@ import { HomeComponent } from './components/main/home/home.component';
 
 import { ProductsService } from './../app/services/products.service';
 import { HttpClientModule } from '@angular/common/http';
+import { TableAppointmentComponent } from './components/tables/table-appointment/table-appointment.component';
+import { SubadminNavComponent } from './components/dashboard/subadmin-nav/subadmin-nav.component';
+import { TableOffersComponent } from './components/tables/table-offers/table-offers.component';
+import { TableServicesComponent } from './components/tables/table-services/table-services.component';
+import { TableMydriversComponent } from './components/tables/table-mydrivers/table-mydrivers.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +38,12 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     TableRolComponent,
     TableStoreComponent,
-    HomeComponent
+    HomeComponent,
+    TableAppointmentComponent,
+    SubadminNavComponent,
+    TableOffersComponent,
+    TableServicesComponent,
+    TableMydriversComponent
   ],
   imports: [
     BrowserModule,

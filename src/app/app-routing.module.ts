@@ -8,17 +8,34 @@ import { RegisterComponent } from './components/auth/register/register.component
 import { TableRolComponent } from "./components/tables/table-rol/table-rol.component";
 import { TableStoreComponent } from "./components/tables/table-store/table-store.component";
 import { HomeComponent } from "./components/main/home/home.component";
+import { TableAppointmentComponent } from './components/tables/table-appointment/table-appointment.component';
+import { SubadminNavComponent } from './components/dashboard/subadmin-nav/subadmin-nav.component';
+import { TableServicesComponent } from './components/tables/table-services/table-services.component';
+import { TableOffersComponent } from './components/tables/table-offers/table-offers.component';
+import { TableMydriversComponent } from './components/tables/table-mydrivers/table-mydrivers.component';
 
 
 const routes: Routes = [
-  
+  // - RUTAS PARA EL MODULO ADMIN
   {path: "Admin", component: AdminNavComponent, children: [
+    // RUTAS HIJAS DEL MODULO ADMIN ---- EJEMPLO: http://localhost:4200/Admin/users
     { path: 'users', component: TableUsersComponent },
     { path: 'products', component: TableProductsComponent },
     { path: 'rols', component: TableRolComponent },
     { path: 'stores', component: TableStoreComponent },
+    { path: "appointment", component: TableAppointmentComponent},
     { path: '', component: TableUsersComponent }
   ]},
+  // - RUTAS PARA EL MODULO SUB ADMIN
+  { path: "sub-admin", component: SubadminNavComponent, children: [
+    // RUTAS HIJAS PARA EL MODULO SUB ADMIN --- EJEMPLO:  http://localhost:4200/sub-admin/appointment
+    { path: "products", component: TableProductsComponent},
+    { path: "appointment", component: TableAppointmentComponent},
+    { path: "services", component: TableServicesComponent},
+    { path: "offers", component: TableOffersComponent},
+    { path: "mydrivers", component: TableMydriversComponent}
+  ]},
+  // RUTAS INICIALES --- EJEMPLO http://localhost:4200/login
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
   { path: "home", component: HomeComponent },

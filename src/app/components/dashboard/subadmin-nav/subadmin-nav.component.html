@@ -3,14 +3,14 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Admin-Menu</mat-toolbar>
+    <mat-toolbar>SubAdmin-Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="Admin/users">Usuarios</a>
-      <a mat-list-item href="Admin/products">Productos</a>
-      <a mat-list-item href="Admin/appointment">Citas</a>
-      <a mat-list-item href="Admin/stores">Tiendas</a>
-      <a mat-list-item href="Admin/rols">Roles</a>
-      <button class="btn btn-danger mt-5 ml-3">Cerrar Sesion</button>
+      <a mat-list-item href="sub-admin/products">Productos</a>
+      <a mat-list-item href="sub-admin/appointment">Citas</a>
+      <a mat-list-item href="sub-admin/services">Servicios</a>
+      <a mat-list-item href="sub-admin/offers">Ofertas</a>
+      <a mat-list-item href="sub-admin/mydrivers">My Drivers</a>
+      <button class="btn btn-outline-danger mt-5 ml-3">Cerrar Sesion</button>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -23,7 +23,8 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>opticaweb</span>
+      <span>OpticaWeb</span>
+      
     </mat-toolbar>
     <!-- Add Content Here -->
     <router-outlet></router-outlet>
