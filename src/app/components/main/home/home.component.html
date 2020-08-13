@@ -3,25 +3,33 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a class="navbar-brand" href="#">InnoVision</a>
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="#"> Catalogo de Lentes <span class="sr-only">(current)</span></a>
-        </li>
+      <a class="navbar-brand" href="#"><img src="./../../../../assets/img/logo.png" style="width: 6rem; height: 4rem;"></a>
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
         <li class="nav-item">
+          <a class="nav-link links" href="#"> Inicio <span class="sr-only">(current)</span></a>
+        </li>
+        <!-- <li class="nav-item">
           <a class="nav-link" href="/customer">¿Quienes somos?<span class="sr-only">(current)</span></a>
+        </li>-->
+        <li class="nav-item">
+          <a class="nav-link links" href="#">Nosotros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Link</a>
+          <a class="nav-link links" href="#">Ópticas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
+          <a class="nav-link links" href="#">Contacto</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-       
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-primary search" type="submit">Buscar</button>
+      <form class="form-inline my-2 my-lg-0 navbar-left">
+        <div class="input-group">
+          <input type="search" class="form-control" placeholder="Buscar tiendas" aria-label="Buscador">
+          <div class="input-group-append">
+            <span class=" btn btn-primary"> <i class="fas fa-search" ></i></span>
+          </div>
+        </div>
+        <!-- <input class="form-control " type="search" placeholder="Buscar tiendas" aria-label="Buscador">
+        <button class="btn btn-primary search" type="submit">Buscar</button>-->
         <button type="button" class="btn btn-outline-primary mr-2" [routerLink]="['/register']">Registrarse</button>
         <button type="button" class="btn btn-outline-success" [routerLink]="['/login']">Iniciar Sesión</button>
 
