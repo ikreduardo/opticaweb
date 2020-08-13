@@ -68,8 +68,27 @@
   }
   .bg-light {
     background-color: #ffff!important;
+    box-shadow: 2px 2px 5px #999;
 }
 .links{
   font-weight: bold;
   color: #14120D;
+}
+.title{
+  font-size: 45px !important;
+}
+hr.line{
+  border: 3px solid  #95DB3D;
+  border-radius: 5px;
+  width: 7rem;
+  margin-left: 0%;
+}
+hr.line-center-blue{
+  border: 3px solid  #007F9F;
+  border-radius: 5px;
+  width: 6rem;
+  margin-left: 0%;
+}
+.text-register{
+  font-size: 1rem;
 }
