@@ -1,22 +1,22 @@
 <a [routerLink]="['/home']"> <img src="../../../../assets/img/home.png" alt="" class="imghome"> </a>
 <div class="background text-center">
-    <form
-      class="form-signin animated fadeIn"
-      autocomplete="off"
-    >
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <!--<form class="form-signin animated fadeIn" autocomplete="off"[formGroup]="registerForm" (ngSubmit)="register()">-->
       <a [routerLink]="['/home']"> <img class="mb-4 img" src="../../../../assets/img/key.png" alt="logo" /> </a>
       <h1 class="h3 mb-3 font-weight-normal">Sign up</h1>
       <label class="sr-only" for="inputEmail">Name</label>
-      <input class="form-control mb-2" id="nameinput" placeholder="Name"/>
+      <input type='hidden' formControlName="iduser" value='1'class="form-control mb-2" />
+      <input type='text' formControlName="username" class="form-control mb-2" id="nameinput" placeholder="Name"/>
       <label class="sr-only" for="inputEmail">Last name</label>
-      <input class="form-control mb-2" id="lastnameinput" placeholder="Last name"/>
+      <input type='text' formControlName="last_name" class="form-control mb-2" id="lastnameinput" placeholder="Last name"/>
       <label class="sr-only" for="inputEmail">Direction</label>
-      <input class="form-control mb-2" id="directioninput" placeholder="Direction"/>
+      <input type='text' formControlName="direction" class="form-control mb-2" id="directioninput" placeholder="Direction"/>
       <label class="sr-only" for="inputEmail">Telphone</label>
-      <input class="form-control mb-2" id="telinput" placeholder="Tel"/>
+      <input type='text' formControlName="tel" class="form-control mb-2" id="telinput" placeholder="Tel"/>
       <label class="sr-only" for="inputEmail">Email Address</label>
       <input
         type="email"
+        formControlName="email"
         class="form-control mb-2"
         id="inputEmail"
         placeholder="Email Address"
@@ -24,18 +24,12 @@
       <label class="sr-only" for="inputPassword">Password</label>
       <input
         type="password"
+        formControlName="password"
         class="form-control mb-3"
         id="inputPassword"
         placeholder="Password"
       />
-      <label class="sr-only" for="inputPassword2">Confirm Password</label>
-      <input
-        type="password"
-        class="form-control mb-3"
-        id="inputPassword2"
-        placeholder="Confirm Password"
-      />
-      <button type="submit" class="btn btn-lg btn-dark btn-block mb-2">
+      <button type="submit" class="btn btn-lg btn-primary btn-block mb-2">
         Sign up
       </button>
       <a [routerLink]="['/login']">Ya tienes una cuenta?</a>

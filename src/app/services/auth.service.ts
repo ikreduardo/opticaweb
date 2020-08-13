@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-//import { IAuth } from '../interfaces/auth';
+
 import { environment } from './../../environments/environment';
 import { Observable } from 'rxjs';
 import { User } from '../models/user';
@@ -8,13 +8,12 @@ import { User } from '../models/user';
   providedIn: 'root'
 })
 export class AuthService {
-  path = environment.endPoint;
-  // + '/login'
-
+  endpoint = environment.endPoint;
   constructor(private http: HttpClient) { }
 
   register(user: User): Observable<any> {
-    return this.http.post('${this.path}users/register', user);
+    const path = this.endpoint + '/api/users/register'
+    return this.http.post(path, user);
   }
 
 }
