@@ -25,7 +25,8 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css"
             ],
             "scripts": []
           },
@@ -125,6 +126,12 @@
   },
   "defaultProject": "opticaweb",
   "cli": {
+<<<<<<< HEAD
     "analytics": "26e19551-4a65-48ff-a482-37d45d56f5b2"
   }
 }
+=======
+    "analytics": "92723f2f-ae85-43af-b4a2-c8197d17a045"
+  }
+}
+>>>>>>> b361a5d3659a2bdeabdc8c545a52fc44a575f54f

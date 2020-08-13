@@ -1,0 +1,117 @@
+.search{
+    margin-right: 25px;
+}
+
+.newbody{
+  background-image: url("/src/assets/img/log.png");
+  size: auto;
+}
+.fir{
+  background-image: src("/src/assets/img/Clo.jpg");
+  background-size: auto;
+}
+
+/*MODAL COMPONENT*/
+.oscuro .modal-content {
+    background-color: #021f2e;
+    color: white;
+  }
+  .oscuro .close {
+    color: white;
+  }
+
+.azul {
+    background-color: #0fa1eb;
+  }
+  .background {
+    height: 100%;
+    width: 100%;
+    background-color: #80d61499;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #FFF;
+  }
+
+  .img {
+    width: 250px;
+    margin-top: 10px;
+  }
+
+  .form-signin {
+    width: 90%;
+    max-width: 200px;
+    padding: 0px;
+    margin: 0 auto;
+  }
+
+  .form-signin .form-control {
+    height: 45px;
+  }
+
+  .text-center {
+    text-align: center!important;
+}
+
+ .panel1{
+    background-color: #FFF;
+  }
+
+  .btn1{
+      color: #FFF;
+  }
+  .t1{
+      color: #FFF;
+      font-style: italic;
+  }
+  .bg-light {
+    background-color: #ffff!important;
+    box-shadow: 2px 2px 5px #999;
+}
+.links{
+  font-weight: bold;
+  color: #14120D;
+}
+.title{
+  font-size: 45px !important;
+}
+hr.line{
+  border: 3px solid  #95DB3D;
+  border-radius: 5px;
+  width: 7rem;
+  margin-left: 0%;
+}
+hr.line-center-blue{
+  border: 3px solid  #007F9F;
+  border-radius: 5px;
+  width: 6rem;
+  margin-left: 0%;
+}
+.text-register{
+  font-size: 1rem;
+}
+.design{
+background-color: #95DB3D;
+}
+.line-left-black{
+  border: 3px solid  #fff;
+  border-radius: 5px;
+  width: 7rem;
+  margin-left: 0%;
+}
+.title-left-black{
+  color:#fff;
+  font-size: 2rem;
+}
+.shadow{
+  box-shadow: 2px 2px 5px #999;
+}
+.design-app{
+  margin-left: 10%;
+}
+.img-design-app{
+  height: 35vh;
+  margin-right: 10%;
+}
