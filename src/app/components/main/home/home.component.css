@@ -73,3 +73,15 @@
   font-weight: bold;
   color: #14120D;
 }
+.title{
+  font-size: 45px !important;
+}
+hr.line{
+  border: 3px solid  #95DB3D;
+  border-radius: 5px;
+  width: 7rem;
+  margin-left: 0%;
+}
+.text-register{
+  font-size: 1rem;
+}
