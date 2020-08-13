@@ -1,0 +1,41 @@
+<h2 class="title ml-4 mb-0">Administrar Roles</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <div class="card-title">
+                        Agregar nuevo Rol:
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="selectedRol.name" placeholder="Name" class="form-control mt-1">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="selectedRol.details" placeholder="Details" class="form-control mt-1">
+                    </div>
+                    <button (click)="addOrEdit()" class="btn btn-success">
+                        Submit
+                    </button>
+                    <button *ngIf="selectedRol.id !== 0"
+                     class="btn btn-danger ml-2"
+                     (click)="delete()">
+                        Delete
+                    </button>
+                    <button (click)="cleanForm()" class="btn btn-info ml-5">
+                        Clean Form
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <ul class="list-group mt-4">
+                <li *ngFor="let rol of rolsArray"
+                class="list-group-item list-group-item-action"
+                (click)="openForEdit(rol)"
+                [class.active]="rol == selectedRol">
+                    <span class="badge badge-primary">{{rol.id}}</span> {{rol.name}}  - [ {{rol.details}} ]
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
