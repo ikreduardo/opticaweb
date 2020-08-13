@@ -13,7 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { TableUsersComponent } from './components/tables/table-users/table-users.component';
 import { TableProductsComponent } from './components/tables/table-products/table-products.component';
-import { FormsModule } from "@angular/forms";
+import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { TableRolComponent } from './components/tables/table-rol/table-rol.component';
@@ -27,6 +27,9 @@ import { SubadminNavComponent } from './components/dashboard/subadmin-nav/subadm
 import { TableOffersComponent } from './components/tables/table-offers/table-offers.component';
 import { TableServicesComponent } from './components/tables/table-services/table-services.component';
 import { TableMydriversComponent } from './components/tables/table-mydrivers/table-mydrivers.component';
+import { ClientComponent } from './components/dashboard/client/client.component';
+import { WellcomeAdminComponent } from './components/main/wellcome-admin/wellcome-admin.component';
+import { WellcomeSubAdminComponent } from './components/main/wellcome-sub-admin/wellcome-sub-admin.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,10 @@ import { TableMydriversComponent } from './components/tables/table-mydrivers/tab
     SubadminNavComponent,
     TableOffersComponent,
     TableServicesComponent,
-    TableMydriversComponent
+    TableMydriversComponent,
+    ClientComponent,
+    WellcomeAdminComponent,
+    WellcomeSubAdminComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +62,7 @@ import { TableMydriversComponent } from './components/tables/table-mydrivers/tab
     MatIconModule,
     MatListModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [ProductsService],
