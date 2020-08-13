@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, Validators } from '@angular/forms';
 import { User } from 'src/app/models/user';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
@@ -11,8 +11,8 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   user: User;
-  constructor(private router: Router, private fb: FormBuilder, private authService: AuthService ) {
-    this.createForm();
+  constructor(private router: Router,private authService: AuthService ) {
+     //this.createForm();
   }
 
   ngOnInit(): void {
@@ -35,14 +35,7 @@ export class RegisterComponent implements OnInit {
   }
 
   createForm(): void{
-    this.registerForm = this.fb.group({
-      username: ['', [Validators.required]],
-      last_name: ['', [Validators.required]],
-      direction: ['', [Validators.required]],
-      tel: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}$')]],
-      password: ['', [Validators.required]],
-    });
+
   }
 
 
