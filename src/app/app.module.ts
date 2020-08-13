@@ -28,6 +28,8 @@ import { TableOffersComponent } from './components/tables/table-offers/table-off
 import { TableServicesComponent } from './components/tables/table-services/table-services.component';
 import { TableMydriversComponent } from './components/tables/table-mydrivers/table-mydrivers.component';
 import { ClientComponent } from './components/dashboard/client/client.component';
+import { WellcomeAdminComponent } from './components/main/wellcome-admin/wellcome-admin.component';
+import { WellcomeSubAdminComponent } from './components/main/wellcome-sub-admin/wellcome-sub-admin.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { ClientComponent } from './components/dashboard/client/client.component'
     TableOffersComponent,
     TableServicesComponent,
     TableMydriversComponent,
-    ClientComponent
+    ClientComponent,
+    WellcomeAdminComponent,
+    WellcomeSubAdminComponent
   ],
   imports: [
     BrowserModule,

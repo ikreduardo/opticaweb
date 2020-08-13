@@ -92,3 +92,26 @@ hr.line-center-blue{
 .text-register{
   font-size: 1rem;
 }
+.design{
+background-color: #95DB3D;
+}
+.line-left-black{
+  border: 3px solid  #fff;
+  border-radius: 5px;
+  width: 7rem;
+  margin-left: 0%;
+}
+.title-left-black{
+  color:#fff;
+  font-size: 2rem;
+}
+.shadow{
+  box-shadow: 2px 2px 5px #999;
+}
+.design-app{
+  margin-left: 10%;
+}
+.img-design-app{
+  height: 35vh;
+  margin-right: 10%;
+}
