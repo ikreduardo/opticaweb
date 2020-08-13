@@ -13,6 +13,7 @@ import { SubadminNavComponent } from './components/dashboard/subadmin-nav/subadm
 import { TableServicesComponent } from './components/tables/table-services/table-services.component';
 import { TableOffersComponent } from './components/tables/table-offers/table-offers.component';
 import { TableMydriversComponent } from './components/tables/table-mydrivers/table-mydrivers.component';
+import { ClientComponent } from './components/dashboard/client/client.component';
 
 
 const routes: Routes = [
@@ -39,7 +40,8 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
   { path: "home", component: HomeComponent },
-  { path: "", component: HomeComponent }
+  { path: "", component: HomeComponent },
+  { path: "client", component: ClientComponent}
 ];
 
 @NgModule({

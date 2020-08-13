@@ -27,6 +27,7 @@ import { SubadminNavComponent } from './components/dashboard/subadmin-nav/subadm
 import { TableOffersComponent } from './components/tables/table-offers/table-offers.component';
 import { TableServicesComponent } from './components/tables/table-services/table-services.component';
 import { TableMydriversComponent } from './components/tables/table-mydrivers/table-mydrivers.component';
+import { ClientComponent } from './components/dashboard/client/client.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { TableMydriversComponent } from './components/tables/table-mydrivers/tab
     SubadminNavComponent,
     TableOffersComponent,
     TableServicesComponent,
-    TableMydriversComponent
+    TableMydriversComponent,
+    ClientComponent
   ],
   imports: [
     BrowserModule,
