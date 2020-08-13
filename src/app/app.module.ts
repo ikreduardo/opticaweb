@@ -21,7 +21,7 @@ import { TableStoreComponent } from './components/tables/table-store/table-store
 import { HomeComponent } from './components/main/home/home.component';
 
 import { ProductsService } from './../app/services/products.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TableAppointmentComponent } from './components/tables/table-appointment/table-appointment.component';
 import { SubadminNavComponent } from './components/dashboard/subadmin-nav/subadmin-nav.component';
 import { TableOffersComponent } from './components/tables/table-offers/table-offers.component';
@@ -30,6 +30,9 @@ import { TableMydriversComponent } from './components/tables/table-mydrivers/tab
 import { ClientComponent } from './components/dashboard/client/client.component';
 import { WellcomeAdminComponent } from './components/main/wellcome-admin/wellcome-admin.component';
 import { WellcomeSubAdminComponent } from './components/main/wellcome-sub-admin/wellcome-sub-admin.component';
+
+// interceptor
+import { AuthInterceptorService } from './services/authinterceptor/auth-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -65,7 +68,14 @@ import { WellcomeSubAdminComponent } from './components/main/wellcome-sub-admin/
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [ProductsService],
+  providers: [
+    ProductsService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
