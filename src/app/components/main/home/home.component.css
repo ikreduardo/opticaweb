@@ -114,4 +114,13 @@ background-color: #95DB3D;
 .img-design-app{
   height: 35vh;
   margin-right: 10%;
+  margin-bottom: 10%;
+}
+.line-green{
+  border: 1px solid  #007F9F;
+  border-radius: 5px;
+  margin-left: 0%;
+}
+.direccion{
+  background-color: #95DB3D;
 }
