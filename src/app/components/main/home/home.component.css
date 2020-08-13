@@ -4,7 +4,7 @@
 
 .newbody{
   background-image: url("/src/assets/img/log.png");
-  size: auto;  
+  size: auto;
 }
 .fir{
   background-image: src("/src/assets/img/Clo.jpg");
@@ -34,19 +34,19 @@
     padding-bottom: 5px;
     color: #FFF;
   }
-   
+
   .img {
     width: 250px;
     margin-top: 10px;
   }
-   
+
   .form-signin {
     width: 90%;
     max-width: 200px;
     padding: 0px;
     margin: 0 auto;
   }
-   
+
   .form-signin .form-control {
     height: 45px;
   }
@@ -66,3 +66,22 @@
       color: #FFF;
       font-style: italic;
   }
+  .bg-light {
+    background-color: #ffff!important;
+}
+.links{
+  font-weight: bold;
+  color: #14120D;
+}
+.title{
+  font-size: 45px !important;
+}
+hr.line{
+  border: 3px solid  #95DB3D;
+  border-radius: 5px;
+  width: 7rem;
+  margin-left: 0%;
+}
+.text-register{
+  font-size: 1rem;
+}
