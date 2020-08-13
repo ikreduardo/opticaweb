@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { IAuth } from './../models/auth';
 
 import { environment } from './../../environments/environment';
 import { Observable } from 'rxjs';
@@ -14,5 +15,10 @@ export class AuthService {
   register(user: User): Observable<any> {
     const path = this.endpoint + '/api/users/register'
     return this.http.post(path, user);
+  }
+
+  login(iauth: IAuth): Observable<any> {
+    const nwpath = this.endpoint +'/api/login';
+    return this.http.post(nwpath, iauth );
   }
 }
