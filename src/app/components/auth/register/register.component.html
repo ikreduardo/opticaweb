@@ -3,23 +3,14 @@
   <form [formGroup]="registerForm" (ngSubmit)="register()">
     <!--<form class="form-signin animated fadeIn" autocomplete="off"[formGroup]="registerForm" (ngSubmit)="register()">-->
       <a [routerLink]="['/home']"> <img class="mb-4 img" src="../../../../assets/img/key.png" alt="logo" /> </a>
-      <h1 class="h3 mb-3 font-weight-normal">Sign up</h1>
-      <label class="sr-only" for="inputEmail">Name</label>
-      <input type='hidden' formControlName="iduser" value='1'class="form-control mb-2" />
-      <input type='text' formControlName="username" class="form-control mb-2" id="nameinput" placeholder="Name"/>
-      <label class="sr-only" for="inputEmail">Last name</label>
-      <input type='text' formControlName="last_name" class="form-control mb-2" id="lastnameinput" placeholder="Last name"/>
-      <label class="sr-only" for="inputEmail">Direction</label>
-      <input type='text' formControlName="direction" class="form-control mb-2" id="directioninput" placeholder="Direction"/>
-      <label class="sr-only" for="inputEmail">Telphone</label>
-      <input type='text' formControlName="tel" class="form-control mb-2" id="telinput" placeholder="Tel"/>
+      <h1 class="h3 mb-3 font-weight-normal">Crear cuenta</h1>
       <label class="sr-only" for="inputEmail">Email Address</label>
       <input
         type="email"
         formControlName="email"
         class="form-control mb-2"
         id="inputEmail"
-        placeholder="Email Address"
+        placeholder="Correo"
       />
       <label class="sr-only" for="inputPassword">Password</label>
       <input
@@ -29,8 +20,18 @@
         id="inputPassword"
         placeholder="Password"
       />
+      <label class="sr-only" for="inputEmail">Name</label>
+      <input type='hidden' formControlName="iduser" value='1'class="form-control mb-2" />
+      <input type='text' formControlName="username" class="form-control mb-2" id="nameinput" placeholder="Nombre"/>
+      <label class="sr-only" for="inputEmail">Last name</label>
+      <input type='text' formControlName="last_name" class="form-control mb-2" id="lastnameinput" placeholder="Apellido"/>
+      <label class="sr-only" for="inputEmail">Direction</label>
+      <input type='text' formControlName="direction" class="form-control mb-2" id="directioninput" placeholder="Dirección"/>
+      <label class="sr-only" for="inputEmail">Telphone</label>
+      <input type='text' formControlName="tel" class="form-control mb-2" id="telinput" placeholder="Telefono"/>
+      
       <button type="submit" class="btn btn-lg btn-primary btn-block mb-2">
-        Sign up
+        Registrar
       </button>
       <a [routerLink]="['/login']">Ya tienes una cuenta?</a>
       <p class="mt-4 mb-3 text-muted">UTT Final - 2020</p>

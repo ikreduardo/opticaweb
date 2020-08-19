@@ -14,6 +14,8 @@ export class TableUsersComponent implements OnInit {
   usersArray : User[] = new Array();
 
   constructor(private usdsv:UserService) {
+    console.log(this.usersArray);
+    
   }
 
   ngOnInit(): void {

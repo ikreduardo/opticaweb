@@ -5,14 +5,24 @@
     [formGroup]="loginForm"
   >
     <a [routerLink]="['/home']"> <img class="mb-4 img" src="../../../../assets/img/key.png" alt="logo" /> </a>
-    <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
+    <h1 class="h3 mb-3 font-weight-normal">Iniciar sesion</h1>
     <label class="sr-only" for="inputEmail">Email Address</label>
-    <input type="email" class="form-control mb-2" placeholder="Email" formControlName="email" required>
+    <input 
+      type="email" 
+      class="form-control mb-2" 
+      placeholder="Email" 
+      formControlName="email" required
+      [class.is-invalid]="emailValidate">
     <label class="sr-only" for="inputPassword">Password</label>
-    <input class="form-control mb-3" type="password" placeholder="Password" formControlName="password" required>
-
-    <button type="submit" class="btn btn-lg btn-dark btn-block mb-2" (click)="login()" id="login">
-      Sign in
+    <input
+      type="password"
+      class="form-control mb-3"
+      id="inputPassword"
+      placeholder="Password:"
+      [class.is-invalid]="passwordValidate"
+    />
+    <button type="submit" class="btn btn-lg btn-dark btn-block mb-2">
+      Ingresar
     </button>
     <a [routerLink]="['/register']">Aun no tienes una cuenta?</a>
     <p class="mt-4 mb-3 text-muted">UTT Final - 2020</p>

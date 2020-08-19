@@ -77,4 +77,16 @@ export class LoginComponent implements OnInit {
       }
     });
   }
+  // VALIDACIONES DE LOGIN
+  get emailValidate(){
+    return(
+      this.loginForm.get('email').invalid && this.loginForm.get('email').touched
+    );
+  }
+
+  get passwordValidate(){
+    return(
+      this.loginForm.get('password').invalid && this.loginForm.get('password').touched
+    );
+  }
 }
