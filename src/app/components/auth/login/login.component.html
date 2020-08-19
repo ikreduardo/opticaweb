@@ -2,22 +2,24 @@
   <form
     class="form-signin animated fadeIn"
     autocomplete="off"
+    [formGroup]="loginForm"
   >
     <a [routerLink]="['/home']"> <img class="mb-4 img" src="../../../../assets/img/key.png" alt="logo" /> </a>
     <h1 class="h3 mb-3 font-weight-normal">Iniciar sesion</h1>
     <label class="sr-only" for="inputEmail">Email Address</label>
-    <input
-      type="email"
-      class="form-control mb-2"
-      id="inputEmail"
-      placeholder="Correo: "
-    />
+    <input 
+      type="email" 
+      class="form-control mb-2" 
+      placeholder="Email" 
+      formControlName="email" required
+      [class.is-invalid]="emailValidate">
     <label class="sr-only" for="inputPassword">Password</label>
     <input
       type="password"
       class="form-control mb-3"
       id="inputPassword"
       placeholder="Password:"
+      [class.is-invalid]="passwordValidate"
     />
     <button type="submit" class="btn btn-lg btn-dark btn-block mb-2">
       Ingresar
