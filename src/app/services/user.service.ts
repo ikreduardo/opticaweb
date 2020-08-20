@@ -14,8 +14,8 @@ export class UserService {
 
   getallUsers() : Observable<any> {
     let headers = new HttpHeaders();
-    headers = headers.append('Authorization','barrer token');
     headers = headers.append('X-pagination', '3');
+    headers = headers.append('Authorization','barrer token');
 
     // query strings
     let params = new HttpParams();
