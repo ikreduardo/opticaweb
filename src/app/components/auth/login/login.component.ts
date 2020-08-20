@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.auth).subscribe(res => {
       if (res) {
         var typeus = res.data.user[0].role_id
+        this.authService.saveTokens(res.data)
         console.log(typeus);
         switch(typeus) {
             // Customer
