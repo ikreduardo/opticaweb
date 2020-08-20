@@ -21,4 +21,14 @@ export class AuthService {
     const nwpath = this.endpoint +'/api/login';
     return this.http.post(nwpath, iauth );
   }
+
+  saveTokens (data) {
+    console.log(data['token'].token);
+    localStorage.setItem('token', data['token'].token)
+    localStorage.setItem('refreshToken', data['token'].refreshToken)
+  }
+
+  isLoggedIn() { 
+    return !!localStorage.getItem('token')
+  }
 }
