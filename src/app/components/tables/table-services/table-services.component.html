@@ -23,15 +23,15 @@
                         <input type="text" [(ngModel)]="selectedService.img" placeholder="Img" class="form-control mt-1">
                     </div>
                     <button (click)="addOrEdit()" class="btn btn-success">
-                        Submit
+                        Guardar
                     </button>
                     <button *ngIf="selectedService.id !== 0"
                      class="btn btn-danger ml-2"
                      (click)="delete()">
-                        Delete
+                        Eliminar
                     </button>
                     <button (click)="cleanForm()" class="btn btn-info ml-5">
-                        Clean Form
+                        Limpiar
                     </button>
                 </div>
             </div>
