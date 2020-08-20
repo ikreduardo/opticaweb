@@ -7,12 +7,19 @@ import { AuthService } from 'src/app/services/auth.service';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  constructor(private authSrv: AuthService){}
+  user = {
+    role: 'admin'
+  }
 
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
+    if(next.data[0] == this.user.role){
+      return true;
+    }
+    else{
+      return false;
+    }
   }
   
 }
