@@ -7,6 +7,7 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { HomeComponent } from './components/home/home.component'
 import { AuthGuard } from './components/guards/auth.guard';
+import { DriverComponent } from './components/main/driver/driver.component';
 
 
 const routes: Routes = [
@@ -16,8 +17,9 @@ const routes: Routes = [
     { path: 'products', component: TableProductsComponent },
     { path: 'rols', component: TableUsersComponent },
     { path: 'stores', component: TableUsersComponent },
+    { path: 'drive', component: DriverComponent },
     /*{ path: "appointment", component: TableAppointmentComponent},
-    { path: '', component: WellcomeAdminComponent }*/
+    { path: '', component: WellcomeAdminComponent }canActivate:[AuthGuard],*/
   ]},
   {path: "home", component: HomeComponent},
   {path: "login", component: LoginComponent},
