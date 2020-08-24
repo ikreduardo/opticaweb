@@ -18,7 +18,7 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { DriverComponent } from './components/main/driver/driver.component';
+import { TableDriversComponent } from './components/tables/table-drivers/table-drivers.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import { DriverComponent } from './components/main/driver/driver.component';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    DriverComponent
+    TableDriversComponent
   ],
   imports: [
     BrowserModule,

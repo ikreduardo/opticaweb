@@ -5,10 +5,9 @@ import { TableUsersComponent } from './components/tables/table-users/table-users
 import { TableProductsComponent } from './components/tables/table-products/table-products.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
-import { HomeComponent } from './components/home/home.component'
+import { HomeComponent } from './components/home/home.component';
+import { TableDriversComponent } from './components/tables/table-drivers/table-drivers.component';
 import { AuthGuard } from './components/guards/auth.guard';
-import { DriverComponent } from './components/main/driver/driver.component';
-
 
 const routes: Routes = [
   
@@ -17,7 +16,7 @@ const routes: Routes = [
     { path: 'products', component: TableProductsComponent },
     { path: 'rols', component: TableUsersComponent },
     { path: 'stores', component: TableUsersComponent },
-    { path: 'drive', component: DriverComponent },
+    { path: 'drivers', component: TableDriversComponent }
     /*{ path: "appointment", component: TableAppointmentComponent},
     { path: '', component: WellcomeAdminComponent }canActivate:[AuthGuard],*/
   ]},
