@@ -5,7 +5,7 @@
             <div class="card mt-4">
                 <div class="card-body">
                     <div class="card-title">
-                        Agregar nuevo usuario:
+                        Agregar nuevo conductor:
                     </div>
                     <div class="form-group">
                         <input type="email" [(ngModel)]="selectedUser.email" placeholder="Email" class="form-control mt-1">
@@ -47,15 +47,6 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-7">
-            <ul class="list-group mt-4">
-                <li *ngFor="let user of usersArray"
-                class="list-group-item list-group-item-action"
-                (click)="openForEdit(user)"
-                [class.active]="user == selectedUser">
-                    <span class="badge badge-primary">{{user.id}}</span> {{user.username}} {{user.last_name}} | {{user.email}}
-                </li>
-            </ul>
-        </div>
+       
     </div>
 </div>
